@@ -1,0 +1,102 @@
+/* styles/ProductDetail.module.css */
+.container {
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto; /* Center container */
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #0070f3;
+  text-decoration: none;
+}
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 30px;
+  align-items: flex-start; /* Align items to the top */
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect ratio for the container */
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden; /* Ensure image stays within bounds */
+  background-color: #f9f9f9;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.category {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+  background-color: #eee;
+  padding: 5px 10px;
+  border-radius: 4px;
+  align-self: flex-start; /* Make tag only as wide as content */
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0070f3;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.addToCartButton {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background-color: #0070f3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: flex-start; /* Align button to the left */
+}
+
+.addToCartButton:hover {
+  background-color: #005bb5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr; /* Stack columns */
+  }
+  .imageWrapper {
+    padding-top: 75%; /* Adjust aspect ratio if needed for smaller screens */
+    margin-bottom: 20px;
+  }
+  .name {
+    font-size: 1.5rem;
+  }
+  .price {
+    font-size: 1.3rem;
+  }
+}
